@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dedicated platform driving gender equality by highlighting the achievements of successful women.">
+    <title>Gender Equality: The Platform for Women's Success</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="HOME.html" class="logo-link">
+            <img src="logo2.png" alt="Gender Equality" style="width:180px; height:auto;">
+            <span class="brand-title">THE SUCCESS SIGN</span>
+        </a>
+
+        <nav class="nav-links" style="background-color: rgb(40, 182, 118);">
+            <ul>
+                <li><a href="HOME.html">HOME</a></li>
+                <li><a href="ABOUTUS.html">ABOUT US</a></li>
+                <li><a href="FEATURED.html">FEATURED STORIES</a></li>
+                <li><a href="RESOURCES.html">RESOURCES & TOOLS</a></li>
+                <li><a href="EVENTS AND NEWS.html">EVENTS & NEWS</a></li>
+                <li><a href="CONTACT US.html">CONTACT & GET INVOLVED</a></li>
+                <li><a href="SDG.html" class="active">SDG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br><br><br>
+
+    <main class="container" style="max-width:900px; margin:auto; padding:20px; text-align:center;">
+
+        <h1>Gender Equality & Sustainable Development 🌍</h1>
+        <p style="color:#555;">Click on any SDG card to learn more dynamically.</p>
+        <br>
+
+        <div id="sdg-container" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+            <div class="sdg-card" data-info="Education transforms societies by unlocking opportunities for girls and women worldwide.">
+                <h3>SDG 4 — Quality Education</h3>
+                <p>Inclusive education for girls and women.</p>
+            </div>
+            <div class="sdg-card" data-info="A world where every woman has the power to lead, decide, and succeed.">
+                <h3>SDG 5 — Gender Equality</h3>
+                <p>Empowering all women and girls.</p>
+            </div>
+            <div class="sdg-card" data-info="Equal opportunities for women strengthen the workforce and economy.">
+                <h3>SDG 8 — Decent Work & Economic Growth</h3>
+                <p>Equal employment and pay for women.</p>
+            </div>
+            <div class="sdg-card" data-info="Ending discrimination ensures fairness and unity across societies.">
+                <h3>SDG 10 — Reduced Inequalities</h3>
+                <p>Equality within and between nations.</p>
+            </div>
+            <div class="sdg-card" data-info="Peace requires full participation and representation of women in decision-making.">
+                <h3>SDG 16 — Peace, Justice & Strong Institutions</h3>
+                <p>Justice and leadership for women.</p>
+            </div>
+        </div>
+    </main>
+    <div id="modal" style="
+        display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+        background:rgba(0,0,0,0.65); justify-content:center; align-items:center; z-index:1000;">
+        
+        <div style="background:white; width:340px; padding:25px; border-radius:10px; text-align:center;">
+            <h2 id="modal-title"></h2>
+            <p id="modal-info" style="margin:10px 0;"></p>
+            <button onclick="closeModal()" style="
+                background:rgb(40, 182, 118); color:white; padding:8px 18px; border:none;
+                cursor:pointer; border-radius:5px;">Close</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const sdgCards = document.querySelectorAll(".sdg-card");
+        const modal = document.getElementById("modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalInfo = document.getElementById("modal-info");
+
+        sdgCards.forEach(card => {
+            card.addEventListener("click", () => {
+                modalTitle.textContent = card.querySelector("h3").textContent;
+                modalInfo.textContent = card.getAttribute("data-info");
+                modal.style.display = "flex";
+            });
+        });
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+
+    <footer style="text-align:center; padding:15px; background:#f4f4f4;">
+        © 2024 The Success Sign Project — Driving Gender Equality Worldwide
+    </footer>
+
+</body>
+</html>

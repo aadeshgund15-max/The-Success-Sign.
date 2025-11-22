@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dedicated platform driving gender equality by highlighting the achievements of successful women. Find profiles, events, and actionable resources.">
+    <title>Gender Equality: The Platform for Women's Success</title>
+
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- HEADER AREA -->
+    <header class="header">
+        <a href="HOME.html" class="logo-link">
+            <img src="logo2.png" alt="Gender Equality" style="width: 200px; height:auto">
+            <div class="title-box"><h1>THE SUCCESS SIGN</h1></div>
+        </a>
+
+        <nav class="nav-links" style="background-color: rgb(40, 182, 118);">
+            <ul>
+                <li><a href="HOME.html">HOME</a></li>
+                <li><a href="ABOUTUS.html">ABOUT US</a></li>
+                <li><a href="FEATURED.html">FEATURED STORIES</a></li>
+                <li><a href="RESOURCES AND TOOLS.html">RESOURCES & TOOLS</a></li>
+                <li><a href="EVENTS AND NEWS.html">EVENTS & NEWS</a></li>
+                <li><a href="CONTACT US.html">CONTACT & GET INVOLVED</a></li>
+                <li><a href="SDG.html">SDG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <br><br><br>
+    <main class="main-content">
+
+        <h1>CONTACT US</h1>
+        <p style="color: #666; margin-bottom: 1rem;">
+            Our mission is to illuminate the path toward Gender Equality by showcasing pioneers, innovators, and leaders across every sector.
+        </p>
+
+        <br>
+        <h1>Reach Out & Make a Difference 🤝</h1>
+        <p class="subtitle">
+            Whether you have questions, suggestions, or want to get involved, we'd love to hear from you! Your voice matters in our mission to drive gender equality.
+        </p>
+
+        <br>
+        <h1>Create Your Account</h1>
+        <p class="subtitle">Join our community to access exclusive content, mentorship opportunities, and network with global leaders.</p>
+
+        <!-- FORM -->
+        <form id="registration-form">
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" id="firstName" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" id="lastName" class="form-input" required>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" class="form-input" required>
+            </div>
+
+            <br>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="form-input" required>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="role" class="form-label">I am registering as...</label>
+                <select id="role" class="form-select" required>
+                    <option value="">-- Select Your Role --</option>
+                    <option value="student">Student/Aspiring Professional</option>
+                    <option value="professional">Established Professional/Leader</option>
+                    <option value="mentor">Potential Mentor</option>
+                    <option value="organization">Partner Organization</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-group form-span-2" style="text-align: center;">
+                <label class="form-label">Areas of Interest (Select all that apply):</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                    <div class="checkbox-group"><input type="checkbox" id="interest-stem" value="stem"><label for="interest-stem">STEM</label></div>
+                    <div class="checkbox-group"><input type="checkbox" id="interest-leadership" value="leadership"><label for="interest-leadership">Leadership & Policy</label></div>
+                    <div class="checkbox-group"><input type="checkbox" id="interest-entrepreneurship" value="entrepreneurship"><label for="interest-entrepreneurship">Entrepreneurship</label></div>
+                    <div class="checkbox-group"><input type="checkbox" id="interest-mentorship" value="mentorship"><label for="interest-mentorship">Mentorship</label></div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="form-group" style="margin-top: 1rem;">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#" style="color: rgb(209, 62, 111); text-decoration: underline;">Terms of Service</a> and Privacy Policy.</label>
+                </div>
+            </div>
+
+            <br>
+            <button type="submit" class="btn">Complete Registration</button>
+
+        </form>
+
+        <p style="text-align: center; margin-top: 1.5rem; font-size: 0.875rem;">
+            Already have an account? <a href="#" style="color: rgb(209, 62, 111); font-weight: 600;">Log In Here</a>
+        </p>
+
+    </main>
+
+    <br><br>
+    <footer style="text-align:center; padding:15px; background:#f4f4f4;">
+        © 2024 The Success Sign Project — Driving Gender Equality Worldwide
+    </footer>
+</body>
+</html>
